@@ -13,6 +13,14 @@ Pour mon cas :
  
 Le script de gnuplot (script.gp) contient les commandes qui permet de générer les graphes.
  
-On l'appel le script.gp à la fin de script.sh par la commande :
+Le script.sh contient à la fin l'appel de script.gp par la commande :
  
  - $ gnuplot script.gp
+
+Ce script shell (script.sh) génére les mesures de performance de compilateurs avec les flags d'optimisations à la fois : 
+
+   c.a.d { GCC , CLANG , ICX } * { -O1 , -O2 , -O3 }
+   
+Les résultats de ces performances sont sauvegardés dans les dossiers gcc, clang, icx pour chaque programme.
+
+Et les graphes générés sont dans le répertoire graphe en mode .png.
