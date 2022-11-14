@@ -5,6 +5,10 @@ sudo cpupower -c 1 frequency-set -g performance
 comp="gcc clang icx"
 oflag="-O1 -O2 -O3"
 
+if [ -d "./gnuplot" ];then #si rept existe on le supprime
+   rm -r -d graphe
+fi
+
 for c in $comp #pour chaque compliteur
 do  
     for flag in $oflag #pour chaque flag
@@ -65,6 +69,7 @@ if [ -d "./graphe" ];then
    rm -r -d graphe
 fi
 mkdir -p graphe #repertoire qui contient les graphes
+
 #lancer script d gnuplot
 gnuplot script.gp
-#rm -r -d gnuplot
+
