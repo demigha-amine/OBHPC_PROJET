@@ -68,8 +68,9 @@ done
 if [ -d "./graphe" ];then 
    rm -r -d graphe
 fi
-mkdir -p graphe #repertoire qui contient les graphes
-#lancer script d gnuplot
 
+mkdir -p graphe #repertoire qui contient les graphes
+
+#lancer script d gnuplot
 gnuplot script.gp
 
