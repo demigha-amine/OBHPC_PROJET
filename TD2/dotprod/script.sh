@@ -24,8 +24,8 @@ do
         mkdir -p $chemin #creation de rep
         mkdir -p gnuplot
 
-        #On lance l'exe avec CPU num 1 et on sauvgard le res ds un fichier.csv
-        taskset -c 1 ./$ex 100 100 > $chemin/$c$flag.csv
+        #On lance l'exe avec CPU num 1 avec n et r comme parametres d'entree , on sauvgard le res ds un fichier.csv
+        taskset -c 1 ./$ex $1 $2 > $chemin/$c$flag.csv
 
         line=$( wc -l < $chemin/$c$flag.csv ) #on recup nbr d lignes de fichier res
 
@@ -67,4 +67,4 @@ fi
 mkdir -p graphe #repertoire qui contient les graphes
 #lancer script d gnuplot
 gnuplot script.gp
-rm -r -d gnuplot
+#rm -r -d gnuplot
