@@ -72,5 +72,5 @@ fi
 mkdir -p graphe #repertoire qui contient les graphes
 
 #lancer script d gnuplot
-gnuplot script.gp
+gnuplot script.gp #generer les graphes et les sauvgarder en .png sur repertoire graphe
 
