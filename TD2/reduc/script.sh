@@ -6,7 +6,7 @@ comp="gcc clang icx"
 oflag="-O1 -O2 -O3"
 
 if [ -d "./gnuplot" ];then #si rept existe on le supprime
-   rm -r -d graphe
+   rm -r -d gnuplot
 fi
 
 for c in $comp #pour chaque compliteur
